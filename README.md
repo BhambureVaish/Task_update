@@ -1,6 +1,4 @@
-# Task_update
 # User Management System
-
 ## Overview
 This project implements a user management system with "Forgot Password" and "Reset Password" features. It utilizes FastAPI for building the API, SQLAlchemy for database interactions, Passlib for password hashing, Python-Jose for handling JWT tokens, FastAPI-Mail for sending emails, and dotenv for managing environment variables.
 
@@ -9,7 +7,6 @@ This project implements a user management system with "Forgot Password" and "Res
 - **User Login**: Users can log into their accounts.
 - **Forgot Password**: Users can request a password reset link via email.
 - **Reset Password**: Users can reset their password using the link sent to their email.
-
 
 ## Implementation Workflow
 
@@ -33,30 +30,7 @@ This project implements a user management system with "Forgot Password" and "Res
 - Configured FastAPI-Mail to use Gmail's SMTP server for sending password reset emails.
 
 ## Feature Implementation
-### 1. User Registration
-- **Endpoint**: `POST /register`
-- **Functionality**: Creates a new user account.
-- **Request Body**:
-  ```json
-  {
-    "first_name": "Vaish",
-    "last_name": "Bhambure",
-    "email": "vaishb@gmail.com",
-    "phone_number": "1234567890",
-    "password": "securepassword"
-  }
-### 2.Login User
-- **Endpoint**: `POST /login`
-- **Method**: `POST`
-
--**Request Body**:
-To log in, users need to provide their email and password in the request body. The request should be formatted as JSON:
-```json
- {
- "email": "vaishb@gmail.com",
-"password": "securepassword"
-}
-### 3. Forgot Password Feature
+### 1. Forgot Password Feature
 - **Endpoint**: `POST /forgot-password`
 - **Functionality**:
   - The user provides their email address.
@@ -69,7 +43,7 @@ To log in, users need to provide their email and password in the request body. T
   "email": "vaishb@gmail.com"
 }
 
-### Reset Password
+### 2.Reset Password
 - **Endpoint**: `POST /reset-password`
 - **Method**: `POST`
 
